@@ -45,9 +45,17 @@ const ProductDetails = () => {
 
     return (
         <div className="product-details">
-            <h1>{product.name}</h1>
-            <img src={product.img} alt={product.name} />
-            <p>{product.desc}</p>
+            <div>
+                <h1>{product.name}</h1>
+                <button>Заказать</button>
+            </div>
+            <div>
+                <img src={product.img} alt={product.name} />
+                <p>{product.desc}</p>
+            </div>
+            <div>
+                
+            </div>
         </div>
     );
 };
