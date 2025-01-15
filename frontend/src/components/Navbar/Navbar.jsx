@@ -3,6 +3,8 @@ import logo from "../../images/navLogo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoChevronDownSharp } from "react-icons/io5";
+import vacansiyaIcon from "../../images/homeImg/vakansiyaIcon1.svg";
+import zakasIcon from "../../images/homeImg/zakasIcon.svg";
 
 export default function Navbar() {
   const [isopen, setIsOpen] = useState("Русский");
@@ -23,7 +25,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center w-full h-[80px] justify-between px-[24px] font-rubik text-[14px]">
       <div>
-        <Link className="decoration-none" to={'/'}>
+        <Link className="decoration-none" to={"/"}>
           <img src={logo} alt="Logo" />
         </Link>
       </div>

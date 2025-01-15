@@ -83,3 +83,102 @@ header {
     transform: rotate(129deg) translateY(-6px) translateX(65px);
     box-shadow: 0px 0px 50px 50px white;
 }
+
+
+/* senosti style  */
+
+.senosti {
+    width: 100%;
+    background-color: #3A3C3A;
+}
+
+.senosti_con {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.senosti_title {
+    font-size: 36px;
+    color: #ABBA27;
+    font-weight: 600;
+    text-align: center;
+}
+
+.senosti_boxs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+.senosti_box {
+    width: calc(50% - 20px);
+    height: 230px;
+    background-color: #4c4f4d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 30px;
+    gap: 10px;
+    border-image: linear-gradient(to bottom right, #3A3C3A 0%, #3A3C3A 50%, #ABBA27 100%) 1;
+    border-radius: 1px; /* this doesn't work */
+    border-width: 1px;
+    border-style: solid;
+}
+
+.senosti_box:nth-child(2) {
+    border-image: linear-gradient(to bottom right, #3A3C3A 0%, #3A3C3A 50%, #ABBA27 100%) 1;
+}
+
+.senosti_box:nth-child(3) {
+    border-image: linear-gradient(to bottom left, #3A3C3A 0%, #3A3C3A 50%, #ABBA27 100%) 1;
+}
+
+.senosti_box:nth-child(4) {
+    border-image: linear-gradient(to top right, #3A3C3A 0%, #3A3C3A 50%, #ABBA27 100%) 1;
+}
+
+.senosti_box:nth-child(5) {
+    border-image: linear-gradient(to top left, #3A3C3A 0%, #3A3C3A 50%, #ABBA27 100%) 1;
+}
+
+.senosti_box h5 {
+    font-size: 24px;
+    color: #ABBA27;
+}   
+
+.senosti_box p{
+    width: 85%;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+
+.senosti_con_logo {
+    position: absolute;
+    left: 49%;
+    right: 0;
+    top: 52%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.senosti_con_logo::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 15px solid rgba(255, 255, 255, 0.138);
+    transform: translateY(-15px);
+
+}
