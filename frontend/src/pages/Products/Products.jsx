@@ -2,38 +2,49 @@ import React from "react";
 import ProductComponent from "./components/ProductComponent";
 
 const Products = () => {
+  const productsData = [
+    {
+      id: 1,
+      name: "Лазерный планировщик",
+      desc: "Лазерные планировщики почвы LTM применяются в сельском хозяйстве для создания ровной поверхности, которая может быть горизонтальной (рисовое поле), либо с одним или двумя наклонами в зависимости от возделываемой культуры (например, при возделывании культур, не требующих большого количества воды, когда необходимо обеспечить отвод излишней влаги), для закладки садов, подготовки участков под теплицы, в промышленности, при строительстве дорог, спортивных сооружений, производственных корпусов, площадей, аэропортов.",
+      img: "https://via.placeholder.com/150",
+    },
+    {
+      id: 2,
+      name: "Плуг оборотный навесной ПОН 4+1x40",
+      desc: "Плуг оборотный навесной – пятикорпусный ПОН-4+1х40 предназначено для пахоты под зерновые и технические культуры на глубину 30…45 cm. Плуги используются на полях с ровным рельефом, где почва не засоренная камнями, с абсолютной влажностью 15..20 %, удельным сопротивлением не более 5.0 МPa,  твердостью 5,0 МPa. Плуг  оборотный навесной ПОН-4+1 агрегатируется тракторами с мощностью двигателя от 200 до 260 л.с. такие как  «CASE-MAGNUM»,  МХМ-240, МХМ-255, «New Holland»  Т-7060 PUMA",
+      img: "https://via.placeholder.com/150",
+    },
+    {
+      id: 3,
+      name: "Бороздоделатель БМА-9",
+      desc: `Бороздоделатель модернизированный агрегатный девятирядный БМА-9 предназначен для вырезания борозд по вспаханному и выровненному полю с междурядьем 90 см.
+      Бороздоделатель БМА-9 агрегатируется с четырехколесными тракторами с мощностью двигателя от 135 до 170 л.с. и выше, такими как «New Holland» Т-6070, «CASE» МХМ-140, «CLAAS ARION 630C» и МТЗ 1523.`,
+      img: "https://via.placeholder.com/150",
+    },
+    {
+      id: 4,
+      name: "УНИВЕРСАЛЬНЫЙ ЧЕТЫРЕХРЯДНЫЙ КУ-4М",
+      desc: `Культиватор - растениепитатель  универсальный  четырехрядный КУ-4М, предназначенный для выполнения в период вегетации основных видов междурядной обработки хлопчатника, кенафа, кукурузы и других высокостебельчатых пропашных культур с междурядьями 60,70 и 90 см, посеянных четырехрядными сеялками.
+      Культиватор агрегатируется с тракторами МТЗ-80Х, ТТЗ-100КП, ТТЗ-60.11, Т28Х4М, Т28Х4М-А.`,
+      img: "https://via.placeholder.com/150",
+    },
+  ];
+
   return (
-    <div>
-      <h1 className="text-xl">Почвообрабатывающая техника</h1>
-      <div>
-        <ProductComponent
-          name="Product Name"
-          desc="This is a description of the product."
-          img="https://via.placeholder.com/150"
-          onDetailsClick={() => console.log("Details button clicked")}
-          onOrderClick={() => console.log("Order button clicked")}
-        />
-        <ProductComponent
-          name="Product Name"
-          desc="This is a description of the product."
-          img="https://via.placeholder.com/150"
-          onDetailsClick={() => console.log("Details button clicked")}
-          onOrderClick={() => console.log("Order button clicked")}
-        />
-        <ProductComponent
-          name="Product Name"
-          desc="This is a description of the product."
-          img="https://via.placeholder.com/150"
-          onDetailsClick={() => console.log("Details button clicked")}
-          onOrderClick={() => console.log("Order button clicked")}
-        />
-        <ProductComponent
-          name="Product Name"
-          desc="This is a description of the product."
-          img="https://via.placeholder.com/150"
-          onDetailsClick={() => console.log("Details button clicked")}
-          onOrderClick={() => console.log("Order button clicked")}
-        />
+    <div className="w-full h-full flex flex-col font-rubik px-[120px] py-[60px] gap-[40px] bg-[#3D3E3D]">
+      <h1 className="text-[36px] text-[#ABBA27]">Почвообрабатывающая техника</h1>
+      <div className="flex flex-col gap-[32px]">
+        {productsData.map((product) => (
+          <ProductComponent
+            key={product.id}
+            name={product.name}
+            desc={product.desc}
+            img={product.img}
+            onDetailsClick={() => console.log(`Details for ${product.name}`)}
+            onOrderClick={() => console.log(`Order for ${product.name}`)}
+          />
+        ))}
       </div>
     </div>
   );
