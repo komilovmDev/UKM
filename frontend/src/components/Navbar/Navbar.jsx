@@ -3,6 +3,8 @@ import logo from "../../images/navLogo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoChevronDownSharp } from "react-icons/io5";
+import vacansiyaIcon from '../../images/homeImg/vakansiyaIcon1.svg'
+import zakasIcon from '../../images/homeImg/zakasIcon.svg'
 
 export default function Navbar() {
   const [isopen, setIsOpen] = useState("Русский");
@@ -37,13 +39,13 @@ export default function Navbar() {
           <button onClick={ToggleOpen} className="flex items-center px-[16px] h-[40px] bg-[#F7F7F7] rounded-[12px] gap-[10px]"><p>Русский</p><span><IoChevronDownSharp /></span></button>
           {isopen && (
             <div>
-
+              
             </div>
           )}
         </div>
         <div className="flex gap-[12px] text-white">
-          <button className="flex items-center px-[16px] h-[40px] bg-[#F0CD51] rounded-[12px] gap-[10px]"><p>Вакансии</p><span></span></button>
-          <button className="flex items-center px-[16px] h-[40px] bg-[#ABBA27] rounded-[12px] gap-[10px]"><p>Заказать</p><span></span> </button>
+          <button className="flex items-center px-[16px] h-[40px] bg-[#F0CD51] rounded-[12px] gap-[10px]"><p>Вакансии</p><span><img src={vacansiyaIcon} alt="" /></span></button>
+          <button className="flex items-center px-[16px] h-[40px] bg-[#ABBA27] rounded-[12px] gap-[10px]"><p>Заказать</p><span><img src={zakasIcon} alt="" /></span> </button>
         </div>
       </div>
     </nav>
