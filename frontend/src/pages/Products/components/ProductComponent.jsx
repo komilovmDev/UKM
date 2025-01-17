@@ -30,7 +30,7 @@ const ProductComponent = ({ id, name, desc, img }) => {
   };
 
   return (
-    <article className="flex w-full h-[371.5px] gap-[55px] rounded-[16px] p-[32px] relative bg-white bg-opacity-10" >
+    <article className="flex w-full h-[371.5px] gap-[55px] rounded-[16px] p-[32px] relative bg-[#4E504E]" >
       <div className="flex flex-col gap-[24px] justify-between">
         <div className="flex flex-col gap-[16px]">
           <h1 className="font-rubik text-[32px] text-white">{name}</h1>

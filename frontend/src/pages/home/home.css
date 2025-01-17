@@ -98,6 +98,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding-bottom: 120px;
 }
 
 .senosti_title {
@@ -180,5 +181,27 @@ header {
     border-radius: 50%;
     border: 15px solid rgba(255, 255, 255, 0.138);
     transform: translateY(-15px);
+}
 
+.bgLogo {
+    position: relative;
+    /* background-image: url('../../images/bgLogo.svg');
+    background-size: cover;
+    background-size: 95%;
+    background-repeat: no-repeat; */
+}
+
+.bgLogo::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    right: 0;
+    background-image: url('../../images/bgLogo.svg');
+    background-size: cover;
+    background-size: 95%;
+    background-position: center;
+    background-position-y: 97%;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
