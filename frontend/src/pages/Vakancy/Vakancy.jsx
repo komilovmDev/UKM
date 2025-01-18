@@ -29,7 +29,7 @@ const Vakancy = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute top-[0px] left-[0px] bg-gradient-s w-full h-[140%] z-[0]"></div>
+      <div className="absolute top-[0px] left-[0px] bg-gradient-s w-full h-[150%] z-[0]"></div>
       <div>
         <h1 className="text-[#ABBA27] text-[36px] font-rubik font-medium h-auto">
           Вакансии

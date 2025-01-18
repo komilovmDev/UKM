@@ -11,7 +11,7 @@ module.exports = {
         rubik: ['"Rubik"', 'sans-serif'], // Подключение кастомного шрифта
       },
       backgroundImage: {
-        'gradient-s': 'linear-gradient(to top, #3D3E3D 50%, transparent 50%)', // Градиент снизу вверх
+        'gradient-s': 'linear-gradient(to top, #3D3E3D, #3D3E3D 20%, transparent)', // Плавный переход на половине
       },
     },
   },

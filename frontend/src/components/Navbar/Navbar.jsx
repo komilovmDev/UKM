@@ -14,9 +14,9 @@ export default function Navbar() {
   };
 
   const buttons = [
-    { text: "О нас", url: "/" },
+    { text: "О нас", url: "/About" },
     { text: "Продукты", url: "/Products" },
-    { text: "Тренды", url: "/services" },
+    { text: "Тендеры", url: "/Tenders" },
     { text: "Новости", url: "/contact" },
     { text: "Услуги", url: "/vacancy" },
     { text: "Контакты", url: "/order" },
@@ -53,12 +53,12 @@ export default function Navbar() {
           <Link to={'/Vakancy'}>
             <button className="flex items-center px-[16px] h-[40px] bg-[#F0CD51] rounded-[12px] gap-[10px]">
               <p>Вакансии</p>
-              <span></span>
+              <span><img src={vacansiyaIcon} alt="" /></span>
             </button>
           </Link>
           <button className="flex items-center px-[16px] h-[40px] bg-[#ABBA27] rounded-[12px] gap-[10px]">
             <p>Заказать</p>
-            <span></span>{" "}
+            <span><img src={zakasIcon} alt="" /></span>{" "}
           </button>
         </div>
       </div>

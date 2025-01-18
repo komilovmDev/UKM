@@ -5,6 +5,8 @@ import Products from "./pages/Products/Products";
 import "./App.css";
 import ProductDetails from "./pages/Products/components/ProductList/ProductList";
 import Vakancy from "./pages/Vakancy/Vakancy";
+import Tender from "./pages/Tender/Tender";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/Products" element={<Products />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/Vakancy" element={<Vakancy />} />
+        <Route path="/Tenders" element={<Tender />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </Router>
   );
