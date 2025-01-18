@@ -61,6 +61,9 @@ const ProductDetails = () => {
       <div>
         <Table />
       </div>
+      <div className="mt-[64px] mb-[80px] w-full">
+        <button className="w-full h-[64px] flex items-center justify-center rounded-[12px] bg-[#ABBA27] text-[24px] font-semibold text-white font-rubik">Заказать</button>
+      </div>  
     </div>
   );
 };

@@ -50,10 +50,12 @@ export default function Navbar() {
           {isopen && <div></div>}
         </div>
         <div className="flex gap-[12px] text-white">
-          <button className="flex items-center px-[16px] h-[40px] bg-[#F0CD51] rounded-[12px] gap-[10px]">
-            <p>Вакансии</p>
-            <span></span>
-          </button>
+          <Link to={'/Vakancy'}>
+            <button className="flex items-center px-[16px] h-[40px] bg-[#F0CD51] rounded-[12px] gap-[10px]">
+              <p>Вакансии</p>
+              <span></span>
+            </button>
+          </Link>
           <button className="flex items-center px-[16px] h-[40px] bg-[#ABBA27] rounded-[12px] gap-[10px]">
             <p>Заказать</p>
             <span></span>{" "}
