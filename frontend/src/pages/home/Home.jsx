@@ -173,6 +173,30 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className="aboutHome">
+                <div className="aboutHome_bg">
+                </div>
+                <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[0px] gap-[40px] bg-[#3D3E3D]'>
+                    <div className="w-full flex justify-between">
+                        <h1 className="text-[36px] text-[#ABBA27]">О нас</h1>
+                        <button
+                            className="bg-white bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] px-[26px] py-[8px] border border-[#ABBA27] flex justify-center items-center"
+                            style={{
+                                backgroundImage: `url(${bgbutton})`,
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center",
+                            }}
+                        >
+                            Подробнее
+                        </button>
+                    </div>
+                    <div className='flex'>
+                        <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff] h-20'>Ургенчский завод кормоуборочных машин был организован в сентябре<b> 1981 года</b> на базе Люберецкого ПО<b> «завода им.Ухтомского»</b> г. Люберцы Московкой области.</p>
+                        <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Занимаемая площадь -<b> 7,46 га.</b> В <b>1987 году</b> введены в эксплуатацию новые производственные корпуса с новым оборудованием, производственная площадь которых составляет <b>16160 кв.м.</b></p>
+                    </div>
+                </div>
+            </div>
         </>
     )
 } 

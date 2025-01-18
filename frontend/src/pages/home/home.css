@@ -4,6 +4,7 @@ header {
     background-image: url(../../images/homeImg/homeHeaderBg.svg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: bottom;
 }
 
 .header_info {
@@ -204,4 +205,14 @@ header {
     background-position-y: 97%;
     background-repeat: no-repeat;
     z-index: 0;
+}
+
+.aboutHome {
+    
+}
+
+.aboutHome_bg {
+    width: 100%;
+    height: 550px;
+    background-image: url('../../images/bgAbout.svg');
 }
