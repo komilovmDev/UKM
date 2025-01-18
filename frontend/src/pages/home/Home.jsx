@@ -14,6 +14,7 @@ import turkmanistan from '../../images/turkman.png'
 import pakistan from '../../images/pakistan.png'
 import tajikstan from '../../images/tajikstan.png'
 import { FaArrowRight } from "react-icons/fa6";
+import Rukavodstva from '../../components/rukavodstva/Rukavodstva';
 
 export default function Home() {
 
@@ -201,6 +202,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Rukavodstva />
         </>
     )
 } 
