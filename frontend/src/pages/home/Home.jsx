@@ -13,6 +13,7 @@ import VideoCompanent from '../../components/videoCompanent/VideoCompanent';
 import turkmanistan from '../../images/turkman.png'
 import pakistan from '../../images/pakistan.png'
 import tajikstan from '../../images/tajikstan.png'
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
 
@@ -117,13 +118,16 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col gap-[32px] ">
                             {productsData.map((product) => (
-                                <ProductComponent
-                                    key={product.id}
-                                    id={product.id}
-                                    name={product.name}
-                                    desc={product.desc}
-                                    img={product.img}
-                                />
+                                <div className='relative flex items-center ' key={product.id}>
+                                    <ProductComponent
+                                        key={product.id}
+                                        id={product.id}
+                                        name={product.name}
+                                        desc={product.desc}
+                                        img={product.img}
+                                    />
+                                    <button className='bg-[#ffffff] w-[70px] h-[70px] flex items-center justify-center rounded-full border-[10px] border-[#3A3C3A] absolute right-[-40px] text-[#ABBA27]'><FaArrowRight /></button>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -192,7 +196,7 @@ export default function Home() {
                         </button>
                     </div>
                     <div className='flex'>
-                        <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff] h-20'>Ургенчский завод кормоуборочных машин был организован в сентябре<b> 1981 года</b> на базе Люберецкого ПО<b> «завода им.Ухтомского»</b> г. Люберцы Московкой области.</p>
+                        <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Ургенчский завод кормоуборочных машин был организован в сентябре<b> 1981 года</b> на базе Люберецкого ПО<b> «завода им.Ухтомского»</b> г. Люберцы Московкой области.</p>
                         <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Занимаемая площадь -<b> 7,46 га.</b> В <b>1987 году</b> введены в эксплуатацию новые производственные корпуса с новым оборудованием, производственная площадь которых составляет <b>16160 кв.м.</b></p>
                     </div>
                 </div>
