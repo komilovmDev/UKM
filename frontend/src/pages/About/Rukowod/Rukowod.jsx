@@ -17,7 +17,7 @@ const Rukowod = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-[48px] w-full">
+    <div className="flex flex-col gap-[48px] w-full h-auto">
       {rukdata.map((data) => (
         <div
           key={data.id}
