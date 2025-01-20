@@ -7,17 +7,17 @@ import WorldImg from "./components/img/Worldimg/Frame.png";
 
 const About = () => {
   const vacancyData = [
-    { title: "Устав", available: 1 },
-    { title: "Структура", available: 2 },
-    { title: "Бизнес планы", available: 3 },
+    { title: "Устав", available: 1, link: "/Ustav" },
+    { title: "Структура", available: 2, link: "/Struktura" },
+    { title: "Бизнес планы", available: 3, link: "/BiznesPlan" },
     { title: "Наблюдательный совет", available: 4 },
     { title: "Список аффилированныхлиц", available: 5 },
-    { title: "Существенные факты", available: 6 },
-    { title: "Протоколы акционеров", available: 7 },
-    { title: "Ежеквартальные отчеты", available: 8 },
-    { title: "Годовые отчеты", available: 9 },
+    { title: "Существенные факты", available: 6, link: "/Fakt" },
+    { title: "Протоколы акционеров", available: 7, link: "/Aksiya" },
+    { title: "Ежеквартальные отчеты", available: 8, link: "/KvartalIzohi" },
+    { title: "Годовые отчеты", available: 9, link: "/YilIzohi" },
     { title: "Выплаченные дивиденды", available: 10 },
-    { title: "Аудиторский отчет", available: 11 },
+    { title: "Аудиторский отчет", available: 11, link: "/Audit" },
   ];
 
   const aboutData = [
@@ -92,23 +92,25 @@ const About = () => {
         <VacancyButtons vacancies={vacancyData} />
       </div>
       <div className="flex flex-col gap-[48px] py-[16px] pb-[96px]">
-        <p className="text-[36px] font-rubik font-medium text-[#ABBA27]">
-          Рукаводство
-        </p>
-        <Rukowod />
-      </div>
-      <div className="flex flex-col gap-[32px] pt-[56px]">
-        {aboutData.map((data) => (
-          <AboutComment
-            key={data.id}
-            imgSrc={data.imgSrc}
-            title={data.title}
-            paragraphs={data.paragraphs}
-          />
-        ))}
-      </div>
-      <div className="pt-[59px]">
-        <ProductInTheWorld {...productData} />
+        <div className="flex flex-col gap-[48px] py-[16px]">
+          <p className="text-[36px] font-rubik font-medium text-[#ABBA27]">
+            Рукаводство
+          </p>
+          <Rukowod />
+        </div>
+        <div className="flex flex-col gap-[32px] pt-[56px]">
+          {aboutData.map((data) => (
+            <AboutComment
+              key={data.id}
+              imgSrc={data.imgSrc}
+              title={data.title}
+              paragraphs={data.paragraphs}
+            />
+          ))}
+        </div>
+        <div className="pt-[59px]">
+          <ProductInTheWorld {...productData} />
+        </div>
       </div>
     </div>
   );
