@@ -5,17 +5,17 @@ import AboutComment from "./components/AboutComment/AboutComment";
 
 const About = () => {
   const vacancyData = [
-    { title: "Устав", available: 1 , link: "/Ustav"},
+    { title: "Устав", available: 1, link: "/Ustav" },
     { title: "Структура", available: 2, link: "/Struktura" },
-    { title: "Бизнес планы", available: 3 , link : "/BiznesPlan"},
+    { title: "Бизнес планы", available: 3, link: "/BiznesPlan" },
     { title: "Наблюдательный совет", available: 4 },
     { title: "Список аффилированныхлиц", available: 5 },
-    { title: "Существенные факты", available: 6 , link : "/Fakt"},
-    { title: "Протоколы акционеров", available: 7 , link : "/Aksiya"},
-    { title: "Ежеквартальные отчеты", available: 8 },
-    { title: "Годовые отчеты", available: 9 , link : "/YilIzohi"},
+    { title: "Существенные факты", available: 6, link: "/Fakt" },
+    { title: "Протоколы акционеров", available: 7, link: "/Aksiya" },
+    { title: "Ежеквартальные отчеты", available: 8, link: "/KvartalIzohi" },
+    { title: "Годовые отчеты", available: 9, link: "/YilIzohi" },
     { title: "Выплаченные дивиденды", available: 10 },
-    { title: "Аудиторский отчет", available: 11 , link : "/Audit"},
+    { title: "Аудиторский отчет", available: 11, link: "/Audit" },
   ];
 
   const aboutData = {

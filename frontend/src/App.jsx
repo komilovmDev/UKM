@@ -34,7 +34,7 @@ function App() {
         <Route path="/Aksiya" element={<Aksiya />} />
         <Route path="/YilIzohi" element={<YilIzohi />} />
         <Route path="/Audit" element={<AuditIzoh />} />
-        <Route path="/ChorakIzoh" element={<ChorakIzoh />} />
+        <Route path="/KvartalIzohi" element={<ChorakIzoh />} />
       </Routes>
     </Router>
   );
