@@ -1,31 +1,21 @@
 import React, { useState } from "react";
 import UstavHeader from "../Ustav/components/UstavHeader";
-import UstavCatalog from "../Ustav/components/UstavCatalog";
+import UstavCatalog from "../Ustav/components/UstavCatalog"; 
 
 export default function Nablyudat() {
   const [catalog, setCatalog] = useState([
-    { id: 1, info: `Состав исполнительного органа АО "Урганчкорммаш".` },
-    { id: 2, info: `Состав Наблюдательного совета АО "Урганчкорммаш` },
+    { id: 1, info: "2017" },
+    { id: 2, info: "2018" },
+    { id: 3, info: "2019" },
+    { id: 4, info: "2020" },
+    { id: 5, info: "2021" },
+    { id: 6, info: "2022" },
+    { id: 7, info: "2023" },
+    { id: 8, info: "2024" },
+    { id: 9, info: "2025" },
   ]);
 
   const [selectedCatalogId, setSelectedCatalogId] = useState(1);
-
-  // Данные для таблиц
-  const tableData = {
-    1: [
-      { id: 1, name: "Документ 1", description: "Описание документа 1" },
-      { id: 2, name: "Документ 2", description: "Описание документа 2" },
-    ],
-    2: [
-      { id: 3, name: "Документ 3", description: "Описание документа 3" },
-      { id: 4, name: "Документ 4", description: "Описание документа 4" },
-    ],
-    3: [
-      { id: 5, name: "Документ 5", description: "Описание документа 5" },
-      { id: 6, name: "Документ 6", description: "Описание документа 6" },
-    ],
-    // Добавьте данные для других годов
-  };
 
   const handleCatalogClick = (id) => {
     setSelectedCatalogId(id);
@@ -46,40 +36,8 @@ export default function Nablyudat() {
               />
             ))}
           </div>
-          <div className="relative w-full ">
-            {/* Таблица */}
-            <table className="w-full border-collapse border-spacing-0 overflow-hidden">
-              <thead>
-                <tr>
-                  <th className="border border-[#D2DBE1] p-2 text-left">ID</th>
-                  <th className="border border-[#D2DBE1] p-2 text-left">
-                    Ф.И.Ш.
-                  </th>
-                  <th className="border border-[#D2DBE1] p-2 text-left">
-                    Позиция
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {tableData[selectedCatalogId]?.length > 0 ? (
-                  tableData[selectedCatalogId].map((row) => (
-                    <tr key={row.id}>
-                      {Object.values(row).map((cell, index) => (
-                        <td key={index} className="border border-[#D2DBE1] p-2">
-                          {cell}
-                        </td>
-                      ))}
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan="3" className="text-center p-4">
-                      Нет данных для выбранного года.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
+          <div className="relative w-full р border border-[#D2DBE1] overflow-hidden rounded-2xl">
+            {/* Таблица */} 
           </div>
         </div>
       </div>
