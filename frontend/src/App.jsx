@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import { routes } from "./routes/AppRoute";
 import { Suspense } from "react";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
