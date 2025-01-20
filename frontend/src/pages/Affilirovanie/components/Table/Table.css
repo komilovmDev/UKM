@@ -1,0 +1,44 @@
+.Affil_Table_Th:nth-child(1) {
+    width: 64px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Affil_Table_Td:nth-child(1) p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Affil_Table_Th:nth-child(2),
+.Affil_Table_Th:nth-child(3),
+.Affil_Table_Th:nth-child(4) {
+    width: 322px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    text-align: start;
+}
+
+.Affil_Table_Th:nth-child(5) {
+    width: 170px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    text-align: start;
+}
+
+/* Media query для больших экранов */
+@media (min-width: 1200px) {
+
+    .Affil_Table_Th:nth-child(2),
+    .Affil_Table_Th:nth-child(3),
+    .Affil_Table_Th:nth-child(4),
+    .Affil_Table_Th:nth-child(5) {
+        width: auto !important;
+        min-height: 68px !important;
+        max-height: 68px !important;
+    }
+}

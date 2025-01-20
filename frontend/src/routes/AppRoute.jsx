@@ -1,3 +1,4 @@
+import Affilirovanie from "../pages/Affilirovanie/Affilirovanie";
 import Undfound from "../pages/404/Undfound";
 import About from "../pages/About/About";
 import Aksiya from "../pages/Aksiya/Aksiya";
@@ -107,7 +108,13 @@ export const routes = [
     fallback: <h1>Loading...</h1>,
   },
   {
-    id: 15,
+    id: 16,
+    path: "/Affilirovanie",
+    element: <Affilirovanie />,
+    fallback: <h1>Loading...</h1>,
+  },
+  {
+    id: 17,
     path: "*",
     element: <Undfound />,
     fallback: <h1>Loading...</h1>,

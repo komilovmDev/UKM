@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import UstavHeader from "../Ustav/components/UstavHeader";
-import UstavCatalog from "../Ustav/components/UstavCatalog"; 
+import UstavCatalog from "../Ustav/components/UstavCatalog";
+import Table from "./components/Table/Table";
+import Table_Two from "./components/Table/Table_Two";
 
 export default function Nablyudat() {
   const [catalog, setCatalog] = useState([
-    { id: 1, info: "2017" },
-    { id: 2, info: "2018" },
-    { id: 3, info: "2019" },
-    { id: 4, info: "2020" },
-    { id: 5, info: "2021" },
-    { id: 6, info: "2022" },
-    { id: 7, info: "2023" },
-    { id: 8, info: "2024" },
-    { id: 9, info: "2025" },
+    {
+      id: 1,
+      info: `Состав исполнительного органа АО "Урганчкорммаш".`,
+    },
+    {
+      id: 2,
+      info: `Состав Наблюдательного совета АО "Урганчкорммаш"`,
+    },
   ]);
 
   const [selectedCatalogId, setSelectedCatalogId] = useState(1);
 
+  // Функция, которая обновляет selectedCatalogId
   const handleCatalogClick = (id) => {
     setSelectedCatalogId(id);
   };
@@ -36,8 +38,19 @@ export default function Nablyudat() {
               />
             ))}
           </div>
-          <div className="relative w-full р border border-[#D2DBE1] overflow-hidden rounded-2xl">
-            {/* Таблица */} 
+
+          <div className="mt-[20px]">
+            {selectedCatalogId === 1 && (
+              <div>
+                <Table />
+              </div>
+            )}
+
+            {selectedCatalogId === 2 && (
+              <div>
+                <Table_Two />
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,0 +1,33 @@
+.Table_th:nth-child(1) {
+    width: 64px;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Table_th:nth-child(2),
+.Table_th:nth-child(3) {
+    width: 50%;
+    text-align: start;
+    justify-content: flex-start;
+    min-height: 68px !important;
+    max-height: 68px !important;
+}
+
+.Table_td:nth-child(1) {
+    display: flex;
+    width: 64px;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    margin: 0;
+}
+
+.Table_td:nth-child(2),
+.Table_td:nth-child(3) {
+    height: 65px !important;
+}

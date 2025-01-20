@@ -11,7 +11,7 @@ const About = () => {
     { title: "Структура", available: 2, link: "/Struktura" },
     { title: "Бизнес планы", available: 3, link: "/BiznesPlan" },
     { title: "Наблюдательный совет", available: 4, link: "/Nablyudat" },
-    { title: "Список аффилированныхлиц", available: 5 },
+    { title: "Список аффилированныхлиц", available: 5, link: "/Affilirovanie" },
     { title: "Существенные факты", available: 6, link: "/Fakt" },
     { title: "Протоколы акционеров", available: 7, link: "/Aksiya" },
     { title: "Ежеквартальные отчеты", available: 8, link: "/KvartalIzohi" },
