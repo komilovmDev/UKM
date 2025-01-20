@@ -1,3 +1,4 @@
+import Undfound from "../pages/404/Undfound";
 import About from "../pages/About/About";
 import Aksiya from "../pages/Aksiya/Aksiya";
 import AuditIzoh from "../pages/AuditIzoh/AuditIzoh";
@@ -96,6 +97,12 @@ export const routes = [
     id: 14,
     path: "/KvartalIzohi",
     element: <ChorakIzoh />,
+    fallback: <h1>Loading...</h1>,
+  },
+  {
+    id: 15,
+    path: "*",
+    element: <Undfound/>,
     fallback: <h1>Loading...</h1>,
   },
 ];
