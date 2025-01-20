@@ -21,7 +21,7 @@ export default function UstavCatalog({ item, handleCatalogClick, catalogId }) {
         {item.id}
       </span>
       <p
-        className={`min-w-[37px] max-w-[251px] text-start text-[16px] font-rubik ${
+        className={`${item.size ? "w-[160px]" : "min-w-[37px] max-w-[251px]"} text-start text-[16px] font-rubik ${
           isSelected ? "text-[#505150]" : "text-[#FFFFFF]"
         }`}
       >

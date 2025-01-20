@@ -49,43 +49,52 @@ export default function BiznesP() {
       image: UstavDocsImage2,
     },
   ]);
-  
+
   const [catalog, setCatalog] = useState([
     {
       id: 1,
       info: `Бизнес план - 2017`,
+      size: true,
     },
     {
       id: 2,
       info: `Бизнес план - 2018`,
+      size: true,
     },
     {
       id: 3,
       info: `Бизнес план - 2019`,
+      size: true,
     },
     {
       id: 4,
       info: `Бизнес план - 2020`,
+      size: true,
     },
     {
       id: 5,
       info: `Бизнес план - 2021`,
+      size: true,
     },
     {
       id: 6,
       info: `Бизнес план - 2022`,
+      size: true,
     },
     {
       id: 7,
       info: `Бизнес план - 2023`,
+      size: true,
     },
     {
       id: 8,
       info: `Бизнес план - 2024`,
+      size: true,
     },
     {
       id: 9,
       info: `Бизнес план - 2025`,
+      size: true,
     },
   ]);
   const [currentDocs, setCurrentDocs] = useState(biznes);
