@@ -4,6 +4,7 @@ import "./App.css";
 import { routes } from "./routes/AppRoute";
 import { Suspense } from "react";
 
+
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
           />
         ))}
       </Routes>
+      <Footer />
     </Router>
   );
 }
