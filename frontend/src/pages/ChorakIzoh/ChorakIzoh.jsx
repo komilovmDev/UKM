@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import UstavHeader from "../Ustav/components/UstavHeader";
 import UstavDocsImage from "../../images/ustav/biznes.png";
 import UstavDocsImage2 from "../../images/ustav/ustav.png";
 import UstavDocsImage3 from "../../images/ustav/chIzoh.png";
