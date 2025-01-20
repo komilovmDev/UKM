@@ -6,6 +6,7 @@ import BiznesP from "../pages/BiznesPlan/BiznesP";
 import ChorakIzoh from "../pages/ChorakIzoh/ChorakIzoh";
 import Fakti from "../pages/Fakt/Fakti";
 import Home from "../pages/home/Home";
+import Nablyudat from "../pages/Nablyunat/Nablyudat";
 import ProductDetails from "../pages/Products/components/ProductList/ProductList";
 import Products from "../pages/Products/Products";
 import Struktura from "../pages/Struktura/Struktura";
@@ -101,8 +102,14 @@ export const routes = [
   },
   {
     id: 15,
+    path: "/Nablyudat",
+    element: <Nablyudat />,
+    fallback: <h1>Loading...</h1>,
+  },
+  {
+    id: 15,
     path: "*",
-    element: <Undfound/>,
+    element: <Undfound />,
     fallback: <h1>Loading...</h1>,
   },
 ];

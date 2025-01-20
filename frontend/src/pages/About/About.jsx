@@ -10,7 +10,7 @@ const About = () => {
     { title: "Устав", available: 1, link: "/Ustav" },
     { title: "Структура", available: 2, link: "/Struktura" },
     { title: "Бизнес планы", available: 3, link: "/BiznesPlan" },
-    { title: "Наблюдательный совет", available: 4 },
+    { title: "Наблюдательный совет", available: 4, link: "/Nablyudat" },
     { title: "Список аффилированныхлиц", available: 5 },
     { title: "Существенные факты", available: 6, link: "/Fakt" },
     { title: "Протоколы акционеров", available: 7, link: "/Aksiya" },
