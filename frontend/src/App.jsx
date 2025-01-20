@@ -7,6 +7,7 @@ import ProductDetails from "./pages/Products/components/ProductList/ProductList"
 import Vakancy from "./pages/Vakancy/Vakancy";
 import Tender from "./pages/Tender/Tender";
 import About from "./pages/About/About";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Tenders" element={<Tender />} />
         <Route path="/About" element={<About />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
