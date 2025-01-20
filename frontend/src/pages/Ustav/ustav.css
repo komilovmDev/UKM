@@ -1,0 +1,25 @@
+.UstavDocs {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.UstavDocs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.UstavDocs::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+.UstavDocs::-webkit-scrollbar-thumb {
+  background: #f0cd51;
+  border-radius: 4px;
+}
+
+.UstavDocsContainer {
+  padding-top: 8px;
+}
+
+.UstavCatalogs::-webkit-scrollbar {
+  opacity: 0;
+}
