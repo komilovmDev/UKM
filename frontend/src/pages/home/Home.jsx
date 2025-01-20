@@ -1,4 +1,5 @@
 import './home.css'
+import { Link } from 'react-router-dom';
 import headerInfoImg from '../../images/homeImg/headerInfoImg.png'
 import headerBg from '../../images/homeImg/logoHomeBgSvg.svg'
 import logoMini from '../../images/homeImg/logoMini.png'
@@ -15,6 +16,7 @@ import pakistan from '../../images/pakistan.png'
 import tajikstan from '../../images/tajikstan.png'
 import { FaArrowRight } from "react-icons/fa6";
 import Rukavodstva from '../../components/rukavodstva/Rukavodstva';
+import NewsCom from '../../components/newsCompanent/NewsCom';
 
 export default function Home() {
 
@@ -127,7 +129,7 @@ export default function Home() {
                                         desc={product.desc}
                                         img={product.img}
                                     />
-                                    <button className='bg-[#ffffff] w-[70px] h-[70px] flex items-center justify-center rounded-full border-[10px] border-[#3A3C3A] absolute right-[-40px] text-[#ABBA27]'><FaArrowRight /></button>
+                                    <Link to={`/product/${product.id}`}><button className='bg-[#ffffff] w-[70px] h-[70px] flex items-center justify-center rounded-full border-[10px] border-[#3A3C3A] absolute right-[-40px] text-[#ABBA27]'><FaArrowRight /></button></Link>
                                 </div>
                             ))}
                         </div>
@@ -203,6 +205,7 @@ export default function Home() {
                 </div>
             </div>
             <Rukavodstva />
+            <NewsCom />
         </>
     )
 } 
