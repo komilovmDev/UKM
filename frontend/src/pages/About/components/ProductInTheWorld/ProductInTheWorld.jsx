@@ -23,7 +23,7 @@ const ProductInTheWorld = ({
       </div>
 
       {/* Вторая секция */}
-      <div className="flex flex-col gap-[16px] pb-[112px]">
+      <div className="flex flex-col gap-[16px]">
         <h1 className="font-rubik font-bold text-[20px] text-[#ABBA27] h-[20px]">{extraTitle}</h1>
         <div className="flex flex-col gap-[10px]">
           <div className="flex flex-col">
