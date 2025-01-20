@@ -21,15 +21,50 @@ const NewsCom = () => {
                         Подробнее
                     </button>
                 </div>
-                <div>
+                <div className='flex gap-[24px]'>
                     <div className='w-[50%] border border-[#C4C5D0] rounded-[16px] overflow-hidden'>
                         <img className='w-[100%]' src={imgNews} alt="" />
                         <div className='p-[16px]'>
                             <p className='text-[#3D3E3D] text-[16px] font-[600]'>Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.</p>
                             <p className='text-[#3D3E3D] text-[12px] mt-[16px]'>Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.</p>
-                            <div className='flex justify-between items-center'>
-                                <p className='text-[#3D3E3D] text-[12px] font-[600]'>12.01.2024</p>
-                                <span className='flex items-center gap-[5px] text-[12px]'>22 <LuEye /></span>
+                            <div className='flex justify-between items-center mt-[16px]'>
+                                <p className='text-[#000] text-[12px]'>12.01.2024</p>
+                                <span className='flex items-center gap-[5px] text-[12px]'>22 <LuEye className='text-[16px]' /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='w-[50%] flex flex-col gap-[16px]'>
+                        <div className='flex border border-[#C4C5D0] rounded-[16px] overflow-hidden'>
+                            <img className='w-[200px] h-[180px] object-cover' src={imgNews} alt="" />
+                            <div className='p-[12px]'>
+                                <p className='w-full text-[#3D3E3D] text-[16px] font-[600]'>Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.</p>
+                                <p className='w-[100%] text-[#3D3E3D] text-[12px] mt-[10px]'>Lorem ipsum dolor sit amet consectetur. Sed et leo lorem senectus.Lorem ipsum dolor sit...</p>
+                                <div className='flex justify-between items-center mt-[10px]'>
+                                    <p className='text-[#000] text-[12px]'>12.01.2024</p>
+                                    <span className='flex items-center gap-[5px] text-[12px]'>22 <LuEye className='text-[16px]' /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex border border-[#C4C5D0] rounded-[16px] overflow-hidden'>
+                            <img className='w-[200px] h-[180px] object-cover' src={imgNews} alt="" />
+                            <div className='p-[12px]'>
+                                <p className='text-[#3D3E3D] text-[16px] font-[600]'>Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.</p>
+                                <p className='w-[100%] text-[#3D3E3D] text-[12px] mt-[10px]'>Lorem ipsum dolor sit amet consectetur. Sed et leo lorem senectus.Lorem ipsum dolor sit...</p>
+                                <div className='flex justify-between items-center mt-[10px]'>
+                                    <p className='text-[#000] text-[12px]'>12.01.2024</p>
+                                    <span className='flex items-center gap-[5px] text-[12px]'>22 <LuEye className='text-[16px]' /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex border border-[#C4C5D0] rounded-[16px] overflow-hidden'>
+                            <img className='w-[200px] h-[180px] object-cover' src={imgNews} alt="" />
+                            <div className='p-[12px]'>
+                                <p className='text-[#3D3E3D] text-[16px] font-[600]'>Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas. Sed et leo lorem senectus.</p>
+                                <p className='w-[100%] text-[#3D3E3D] text-[12px] mt-[10px]'>Lorem ipsum dolor sit amet consectetur. Sed et leo lorem senectus.Lorem ipsum dolor sit...</p>
+                                <div className='flex justify-between items-center mt-[10px]'>
+                                    <p className='text-[#000] text-[12px]'>12.01.2024</p>
+                                    <span className='flex items-center gap-[5px] text-[12px]'>22 <LuEye className='text-[16px]' /></span>
+                                </div>
                             </div>
                         </div>
                     </div>
