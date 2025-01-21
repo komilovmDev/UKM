@@ -16,7 +16,7 @@ const About = () => {
     { title: "Протоколы акционеров", available: 7, link: "/Aksiya" },
     { title: "Ежеквартальные отчеты", available: 8, link: "/KvartalIzohi" },
     { title: "Годовые отчеты", available: 9, link: "/YilIzohi" },
-    { title: "Выплаченные дивиденды", available: 10 },
+    { title: "Выплаченные дивиденды", available: 10, link: "/Divident" },
     { title: "Аудиторский отчет", available: 11, link: "/Audit" },
   ];
 

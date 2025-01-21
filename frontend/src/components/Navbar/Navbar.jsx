@@ -7,7 +7,8 @@ import vacansiyaIcon from "../../images/homeImg/vakansiyaIcon1.svg";
 import zakasIcon from "../../images/homeImg/zakasIcon.svg";
 
 export default function Navbar() {
-  const [isopen, setIsOpen] = useState("Русский");
+  const [isopen, setIsOpen] = useState(false);
+  const [activeButton, setActiveButton] = useState(""); // Track active button
 
   const ToggleOpen = () => {
     setIsOpen((prev) => !prev);
@@ -22,6 +23,10 @@ export default function Navbar() {
     { text: "Контакты", url: "/order" },
   ];
 
+  const handleButtonClick = (url) => {
+    setActiveButton(url);
+  };
+
   return (
     <nav className="flex items-center w-full h-[80px] justify-between px-[24px] font-rubik text-[14px]">
       <div>
@@ -32,8 +37,20 @@ export default function Navbar() {
       <div className="flex items-center gap-[12px]">
         <div className="flex gap-[12px] text-black">
           {buttons.map((button, index) => (
-            <Link key={index} to={button.url}>
-              <button className="px-[12px] h-[40px]">{button.text}</button>
+            <Link
+              key={index}
+              to={button.url}
+              onClick={() => handleButtonClick(button.url)}
+            >
+              <button
+                className={`px-[12px] h-[40px] ${
+                  activeButton === button.url
+                    ? "border-b-4 border-[#F0CD51]"
+                    : "border-b-4  border-transparent"
+                }`}
+              >
+                {button.text}
+              </button>
             </Link>
           ))}
         </div>
@@ -50,15 +67,19 @@ export default function Navbar() {
           {isopen && <div></div>}
         </div>
         <div className="flex gap-[12px] text-white">
-          <Link to={'/Vakancy'}>
+          <Link to={"/Vakancy"}>
             <button className="flex items-center px-[16px] h-[40px] bg-[#F0CD51] rounded-[12px] gap-[10px]">
               <p>Вакансии</p>
-              <span><img src={vacansiyaIcon} alt="" /></span>
+              <span>
+                <img src={vacansiyaIcon} alt="" />
+              </span>
             </button>
           </Link>
           <button className="flex items-center px-[16px] h-[40px] bg-[#ABBA27] rounded-[12px] gap-[10px]">
             <p>Заказать</p>
-            <span><img src={zakasIcon} alt="" /></span>{" "}
+            <span>
+              <img src={zakasIcon} alt="" />
+            </span>
           </button>
         </div>
       </div>

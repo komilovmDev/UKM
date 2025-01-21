@@ -15,6 +15,7 @@ import Tender from "../pages/Tender/Tender";
 import Ustav from "../pages/Ustav/Ustav";
 import Vakancy from "../pages/Vakancy/Vakancy";
 import YilIzohi from "../pages/YilIzohi/YilIzohi";
+import Divident from "../pages/Divident/Divident";
 
 export const routes = [
   {
@@ -115,6 +116,12 @@ export const routes = [
   },
   {
     id: 17,
+    path: "/Divident",
+    element: <Divident />,
+    fallback: <h1>Loading...</h1>,
+  },
+  {
+    id: 18,
     path: "*",
     element: <Undfound />,
     fallback: <h1>Loading...</h1>,
