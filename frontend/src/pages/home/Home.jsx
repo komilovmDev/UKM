@@ -17,6 +17,12 @@ import tajikstan from '../../images/tajikstan.png'
 import { FaArrowRight } from "react-icons/fa6";
 import Rukavodstva from '../../components/rukavodstva/Rukavodstva';
 import NewsCom from '../../components/newsCompanent/NewsCom';
+import EventsCom from '../../components/eventsCompanent/EventsCom';
+import union from '../../images/Union.png'
+import ProductionExportChart from '../../components/chartcompanent/ProductionExportChart';
+import exportImg from '../../images/export.svg'
+import chartPie from '../../images/charPie.svg'
+import fullExport from '../../images/fullExport.svg'
 
 export default function Home() {
 
@@ -136,15 +142,24 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="vidCompant">
-                    <div className="w-full h-full flex flex-col font-rubik px-[120px] py-[60px] gap-[40px]">
-                        <h1 className="text-[36px] text-center text-[#FFFFFF] z-[1]">Производственные процессы</h1>
-                        <VideoCompanent />
+                    <div className="w-full h-[687px] flex flex-col items-center font-rubik px-[120px] py-[120px] gap-[20px]">
+                        <h1 className="text-[36px] text-center text-[#FFFFFF] z-[1]">Наши продукты сделают вас сильнее!</h1>
+                        <p className='z-[1]  text-[#FFFFFF]'>Оставьте заявку и мы свяжемся с вами</p>
+                        <button className='bg-[#ABBA27] bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] px-[26px] py-[8px] border border-[#ABBA27] flex justify-center items-center z-[1]'
+                            style={{
+                                backgroundImage: `url(${bgbutton})`,
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center",
+                            }}
+                        >Оставить заявку</button>
+                        {/* <VideoCompanent /> */}
                     </div>
                 </div>
             </div>
             <div className="eksportStatic">
                 <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[60px] gap-[40px] mt-20'>
-                    <div className="w-full flex justify-between">
+                    {/* <div className="w-full flex justify-between">
                         <h1 className="text-[36px] text-[#3A3C3A]">Экспорт</h1>
                         <button
                             className="bg-white bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] px-[26px] py-[8px] border border-[#ABBA27] flex justify-center items-center"
@@ -157,9 +172,9 @@ export default function Home() {
                         >
                             Подробнее
                         </button>
-                    </div>
-                    <div className='flex gap-6 items-center'>
-                        <div className='flex gap-6'>
+                    </div> */}
+                    <div className='flex gap-6 items-center bg-slate-700'>
+                        {/* <div className='flex gap-6'>
                             <img className='w-93 h-18' src={turkmanistan} alt="" />
                             <img className='w-93 h-18' src={pakistan} alt="" />
                             <img className='w-93 h-18' src={tajikstan} alt="" />
@@ -167,27 +182,27 @@ export default function Home() {
                         <div className='border-l-2 border-[#F0CD51] pl-4'>
                             <p className='text-xl'>Свою продукцию завод экспортирует в такие страны как;</p>
                             <b className='text-[#3A3C3A] text-xl'>Туркменистан, Пакистан и Таджикистан</b>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="w-full flex justify-between">
-                            <h1 className="text-[36px] text-[#3A3C3A]">Производственная мощность</h1>
-                        </div>
-                        <div className='w-full flex gap-5 mt-6'>
-                            <div className='bg-[#9999] w-[30%] h-64 rounded-xl'></div>
-                            <div className='bg-[#9999] w-[70%] h-64 rounded-xl'></div>
-                        </div>
+                        </div> */}
+                        {/* <ProductionExportChart /> */}
                     </div>
                 </div>
             </div>
             <div className="aboutHome">
                 <div className="aboutHome_bg">
+                    <img className="" src={fullExport} alt="Background" />
+                    {/* <img src={chartPie} alt="" /> */}
                 </div>
                 <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[0px] gap-[40px] bg-[#3D3E3D]'>
                     <div className="w-full flex justify-between">
-                        <h1 className="text-[36px] text-[#ABBA27]">О нас</h1>
+                        <h1 className="text-[256px] font-bold text-transparent stroke">О нас</h1>
+                    </div>
+                    <div className='flex items-center justify-between'>
+                        <div className='w-[85%] flex'>
+                            <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Ургенчский завод кормоуборочных машин был организован в сентябре<b> 1981 года</b> на базе Люберецкого ПО<b> «завода им.Ухтомского»</b> г. Люберцы Московкой области.</p>
+                            <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Занимаемая площадь -<b> 7,46 га.</b> В <b>1987 году</b> введены в эксплуатацию новые производственные корпуса с новым оборудованием, производственная площадь которых составляет <b>16160 кв.м.</b></p>
+                        </div>
                         <button
-                            className="bg-white bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] px-[26px] py-[8px] border border-[#ABBA27] flex justify-center items-center"
+                            className="h-10 w-[114px] bg-white bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] border border-[#ABBA27] flex justify-center items-center"
                             style={{
                                 backgroundImage: `url(${bgbutton})`,
                                 backgroundSize: "cover",
@@ -198,14 +213,11 @@ export default function Home() {
                             Подробнее
                         </button>
                     </div>
-                    <div className='flex'>
-                        <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Ургенчский завод кормоуборочных машин был организован в сентябре<b> 1981 года</b> на базе Люберецкого ПО<b> «завода им.Ухтомского»</b> г. Люберцы Московкой области.</p>
-                        <p className='border-l-[3px] border-[#F0CD51] p-3 text-[#ffffff]'>Занимаемая площадь -<b> 7,46 га.</b> В <b>1987 году</b> введены в эксплуатацию новые производственные корпуса с новым оборудованием, производственная площадь которых составляет <b>16160 кв.м.</b></p>
-                    </div>
                 </div>
             </div>
             <Rukavodstva />
             <NewsCom />
+            <EventsCom />
         </>
     )
 } 

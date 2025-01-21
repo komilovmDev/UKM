@@ -198,11 +198,11 @@ header {
     content: "";
     position: absolute;
     right: 0;
-    background-image: url('../../images/bgLogo.svg');
+    background-image: url('../../images/Union.png');
     background-size: cover;
     background-size: 95%;
     background-position: center;
-    background-position-y: 97%;
+    background-position-y: 95%;
     background-repeat: no-repeat;
     z-index: 0;
 }
@@ -213,6 +213,48 @@ header {
 
 .aboutHome_bg {
     width: 100%;
-    height: 550px;
+    height: 620px;
     background-image: url('../../images/bgAbout.svg');
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+
+.aboutHome_bg img:nth-child(1) {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    z-index: 3; /* Set z-index lower than the overlay to place it behind */
+}
+
+.aboutHome_bg img:nth-child(2) {
+    position: absolute;
+    transform: translateX(-40px);
+    width: 250px;
+    height: 250px;
+    z-index: 3; /* Set z-index lower than the overlay to place it behind */
+}
+
+
+.aboutHome_bg::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#3a3c3aa8 , #3a3c3aa5);
+    backdrop-filter: blur(10px); /* Apply backdrop filter for a nice effect */
+    z-index: 0; /* Ensures the overlay is above the blurred image */
+}
+
+
+.stroke {
+    font-size: 50px;
+    font-weight: bold;
+    color: transparent; 
+    -webkit-text-stroke: 1px #FFFFFF; 
 }
