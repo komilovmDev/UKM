@@ -157,44 +157,17 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="eksportStatic">
-                <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[60px] gap-[40px] mt-20'>
-                    {/* <div className="w-full flex justify-between">
-                        <h1 className="text-[36px] text-[#3A3C3A]">Экспорт</h1>
-                        <button
-                            className="bg-white bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] px-[26px] py-[8px] border border-[#ABBA27] flex justify-center items-center"
-                            style={{
-                                backgroundImage: `url(${bgbutton})`,
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                backgroundPosition: "center",
-                            }}
-                        >
-                            Подробнее
-                        </button>
-                    </div> */}
-                    <div className='flex gap-6 items-center bg-slate-700'>
-                        {/* <div className='flex gap-6'>
-                            <img className='w-93 h-18' src={turkmanistan} alt="" />
-                            <img className='w-93 h-18' src={pakistan} alt="" />
-                            <img className='w-93 h-18' src={tajikstan} alt="" />
-                        </div>
-                        <div className='border-l-2 border-[#F0CD51] pl-4'>
-                            <p className='text-xl'>Свою продукцию завод экспортирует в такие страны как;</p>
-                            <b className='text-[#3A3C3A] text-xl'>Туркменистан, Пакистан и Таджикистан</b>
-                        </div> */}
-                        {/* <ProductionExportChart /> */}
-                    </div>
-                </div>
-            </div>
+            <VideoCompanent />
             <div className="aboutHome">
                 <div className="aboutHome_bg">
+                    <h1 >Производственная мощность и экспорт продукции</h1>
                     <img className="" src={fullExport} alt="Background" />
-                    {/* <img src={chartPie} alt="" /> */}
                 </div>
                 <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[0px] gap-[40px] bg-[#3D3E3D]'>
                     <div className="w-full flex justify-between">
-                        <h1 className="text-[256px] font-bold text-transparent stroke">О нас</h1>
+                        <h1 className="text-[256px] font-bold text-transparent" style={{ WebkitTextStroke: '1px #fff' }}>
+                            О нас
+                        </h1>
                     </div>
                     <div className='flex items-center justify-between'>
                         <div className='w-[85%] flex'>

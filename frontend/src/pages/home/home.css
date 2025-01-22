@@ -1,4 +1,4 @@
-header {    
+header {
     width: 100%;
     height: 100vh;
     background-image: url(../../images/homeImg/homeHeaderBg.svg);
@@ -129,7 +129,8 @@ header {
     padding: 0 30px;
     gap: 10px;
     border-image: linear-gradient(to bottom right, #3A3C3A 0%, #3A3C3A 50%, #ABBA27 100%) 1;
-    border-radius: 1px; /* this doesn't work */
+    border-radius: 1px;
+    /* this doesn't work */
     border-width: 1px;
     border-style: solid;
 }
@@ -153,9 +154,9 @@ header {
 .senosti_box h5 {
     font-size: 24px;
     color: #ABBA27;
-}   
+}
 
-.senosti_box p{
+.senosti_box p {
     width: 85%;
     font-size: 16px;
     color: #FFFFFF;
@@ -207,9 +208,7 @@ header {
     z-index: 0;
 }
 
-.aboutHome {
-    
-}
+.aboutHome {}
 
 .aboutHome_bg {
     width: 100%;
@@ -220,24 +219,25 @@ header {
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
+    padding-top: 200px;
 }
 
+.aboutHome_bg h1 {
+    width: 40%;
+    top: 100px;
+    position: absolute;
+    z-index: 2;
+    font-size: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
-.aboutHome_bg img:nth-child(1) {
+.aboutHome_bg img {
     position: relative;
     width: 100%;
     height: 700px;
-    z-index: 3; /* Set z-index lower than the overlay to place it behind */
+    z-index: 3;
 }
-
-.aboutHome_bg img:nth-child(2) {
-    position: absolute;
-    transform: translateX(-40px);
-    width: 250px;
-    height: 250px;
-    z-index: 3; /* Set z-index lower than the overlay to place it behind */
-}
-
 
 .aboutHome_bg::after {
     content: "";
@@ -246,15 +246,63 @@ header {
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(#3a3c3aa8 , #3a3c3aa5);
-    backdrop-filter: blur(10px); /* Apply backdrop filter for a nice effect */
-    z-index: 0; /* Ensures the overlay is above the blurred image */
+    background: linear-gradient(#3a3c3aa8, #3a3c3aa5);
+    backdrop-filter: blur(10px);
+    /* Apply backdrop filter for a nice effect */
+    z-index: 0;
+    /* Ensures the overlay is above the blurred image */
+}
+
+.mySwiper {
+    width: 100%;
+    margin-left: 100px;
+}
+
+/* .custom-slide {
+    transition: transform 0.5s ease-in-out;
+    opacity: 0.7;
+    transform: scale(0.9);
+} */
+
+.swiper-slide-active {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+}
+/* 
+.slide-box {
+    width: 826px;
+    height: 381px;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+} */
+
+.custom-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.7; /* Yon tomonlar biroz ko'kroq ko'rinadi */
+  transform: scale(0.9); /* Yon tomonlarni kichikroq qilish */
+}
+
+.swiper-slide-active {
+    transform: scale(1) !important; /* O'rtadagi slayd 100% */
+    opacity: 1 !important;
+    z-index: 10 !important;
 }
 
 
-.stroke {
-    font-size: 50px;
-    font-weight: bold;
-    color: transparent; 
-    -webkit-text-stroke: 1px #FFFFFF; 
+.slide-box {
+  width: 100%;
+  height: 381px;
+  display: flex;
+  border-radius: 32px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
 }
