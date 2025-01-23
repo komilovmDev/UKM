@@ -4,22 +4,9 @@ import Rukowod from "./Rukowod/Rukowod";
 import AboutComment from "./components/AboutComment/AboutComment";
 import ProductInTheWorld from "./components/ProductInTheWorld/ProductInTheWorld";
 import WorldImg from "./components/img/Worldimg/Frame.png";
+import AboutUs from "../home/components/AboutUs/AboutUs";
 
 const About = () => {
-  const vacancyData = [
-    { title: "Устав", available: 1, link: "/Ustav" },
-    { title: "Структура", available: 2, link: "/Struktura" },
-    { title: "Бизнес планы", available: 3, link: "/BiznesPlan" },
-    { title: "Наблюдательный совет", available: 4, link: "/Nablyudat" },
-    { title: "Список аффилированныхлиц", available: 5, link: "/Affilirovanie" },
-    { title: "Существенные факты", available: 6, link: "/Fakt" },
-    { title: "Протоколы акционеров", available: 7, link: "/Aksiya" },
-    { title: "Ежеквартальные отчеты", available: 8, link: "/KvartalIzohi" },
-    { title: "Годовые отчеты", available: 9, link: "/YilIzohi" },
-    { title: "Выплаченные дивиденды", available: 10, link: "/Divident" },
-    { title: "Аудиторский отчет", available: 11, link: "/Audit" },
-  ];
-
   const aboutData = [
     {
       id: 1,
@@ -84,14 +71,11 @@ const About = () => {
   };
 
   return (
-    <div className="px-[120px] bg-[#3D3E3D] w-full h-auto">
-      <div className="py-[50px] w-full flex flex-col gap-[32px]">
-        <p className="text-[36px] text-[#ABBA27] font-rubik font-medium">
-          О нас
-        </p>
-        <VacancyButtons vacancies={vacancyData} />
+    <div className="bg-[#3D3E3D] w-full h-auto">
+      <div className=" w-full flex flex-col gap-[32px]">
+        <AboutUs />
       </div>
-      <div className="flex flex-col gap-[48px] py-[16px] pb-[96px]">
+      <div className="flex flex-col px-[120px] gap-[48px] py-[16px] pb-[96px]">
         <div className="flex flex-col gap-[48px] py-[16px]">
           <p className="text-[36px] font-rubik font-medium text-[#ABBA27]">
             Рукаводство
