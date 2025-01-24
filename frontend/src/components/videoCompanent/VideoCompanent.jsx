@@ -12,9 +12,9 @@ const VideoCompanent = () => {
   return (
     <div>
       <div className="w-full h-full flex flex-col font-rubik px-[120px] py-[40px] gap-[40px] mt-0">
-        <div className="w-full flex justify-between">
-          <h1 className="text-[36px] text-[#3A3C3A]">Мероприятия</h1>
-          <Button/>
+        <div className="w-full flex flex-col justify-center items-center">
+          <h1 className="text-[36px] text-[#3A3C3A] font-bold">Производственные процессы</h1>
+          <p className="text-[20px] font-[100]">Lorem ipsum dolor sit amet consectetur. Nec id lacus ullamcorper enim maecenas.</p>
         </div>
       </div>
       <div className="relative mb-[40px]">
