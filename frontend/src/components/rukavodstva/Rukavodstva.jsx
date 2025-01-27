@@ -1,9 +1,9 @@
 import './rukavodstva.css';
 import osnavatelImg from '../../images/osnavatelFoto.png';
-import derektorImg from '../../images/Juratbek-Atajanov.png';
-import dilmurodrahimov from '../../images/Rahimov Dilmurod.png';
-import igorkuvhkarov from '../../images/Кучкаров-Игор.png';
-import lianatoly from '../../images/Ли-Анатолий.png';
+import derektorImg from '../../images/ja.png';
+import dilmurodrahimov from '../../images/dr.png';
+import igorkuvhkarov from '../../images/ki.png';
+import lianatoly from '../../images/la.png';
 
 export default function Rukavodstva() {
     return (

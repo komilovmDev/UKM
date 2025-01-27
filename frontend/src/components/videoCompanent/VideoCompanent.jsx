@@ -13,7 +13,6 @@ const VideoComponent = () => {
   );
   const videoRefs = useRef([]);
 
-  // Play/Pause funksiyasi
   const togglePlayPause = (index) => {
     const video = videoRefs.current[index];
     if (video) {
@@ -75,7 +74,6 @@ const VideoComponent = () => {
           </p>
         </div>
       </div>
-
       <div className="relative mb-[40px]">
         <Swiper
           slidesPerView={1.5}
@@ -89,7 +87,6 @@ const VideoComponent = () => {
           {videoStates.map((state, index) => (
             <SwiperSlide key={index} className="custom-slide">
               <div className="slide-box flex items-end relative">
-                {/* Video */}
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   className="w-full absolute z-0 top-0 right-0"
@@ -100,8 +97,6 @@ const VideoComponent = () => {
                   controls={true}
                   autoPlay={false}
                 />
-
-                {/* Play/Pause tugmasi */}
                 <button
                   onClick={() => togglePlayPause(index)}
                   className={`absolute inset-0 flex justify-center items-center transition-opacity duration-300 ${
@@ -116,8 +111,6 @@ const VideoComponent = () => {
                     )}
                   </div>
                 </button>
-
-                {/* Pastki overlay matn */}
                 <div className="w-full z-[2] relative inset-0 bg-gradient-to-b from-transparent via-[#3D3E3D] to-[#3D3E3D] p-4 text-white">
                   <p className="text-[16px] font-bold">Lorem ipsum</p>
                   <p className="text-[12px]">
@@ -131,7 +124,6 @@ const VideoComponent = () => {
                     </span>
                   </div>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}
