@@ -23,6 +23,9 @@ import exportImg from "../../images/export.svg";
 import chartPie from "../../images/charPie.svg";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Button from "./components/Button_ukm/Button";
+import DocumentCom from "../../components/documentCom/DocumentCom";
+import masterImg from "../../images/master.svg"
+import PartnersCom from "../../components/partnersCom/PartnersCom";
 
 export default function Home() {
   const productsData = [
@@ -118,15 +121,15 @@ export default function Home() {
       </div>
       <div
         className="bgLogo bg-[#3A3C3A] rounded-bl-full rounded-br-full"
-        // style={{
-        //     backgroundImage: `url(${bgLogo})`,
-        //     zIndex:'1',
-        //     backgroundSize: "cover",
-        //     backgroundRepeat: "no-repeat",
-        //     backgroundSize: '95%',
-        //     backgroundPosition: 'center',
-        //     backgroundPositionY: '0'
-        // }}
+      // style={{
+      //     backgroundImage: `url(${bgLogo})`,
+      //     zIndex:'1',
+      //     backgroundSize: "cover",
+      //     backgroundRepeat: "no-repeat",
+      //     backgroundSize: '95%',
+      //     backgroundPosition: 'center',
+      //     backgroundPositionY: '0'
+      // }}
       >
         <div className="products">
           <div className="w-full h-full flex flex-col font-rubik px-[120px] py-[60px] gap-[40px]">
@@ -182,8 +185,31 @@ export default function Home() {
       <VideoCompanent />
       <AboutUs />
       <Rukavodstva />
+      <DocumentCom />
       <NewsCom />
       <EventsCom />
+      <div className="relative w-full h-[687px] flex flex-col items-center font-rubik px-[120px] py-[120px] gap-[20px]">
+        <h1 className="text-[36px] text-center text-[#3D3E3D] z-[1]">
+          Наши продукты сделают вас сильнее!
+        </h1>
+        <p className="z-[1]  text-[#3D3E3D]">
+          Оставьте заявку и мы свяжемся с вами
+        </p>
+        <button
+          className="bg-[#ABBA27] bg-opacity-10 rounded-[8px] font-semibold text-[#ABBA27] px-[26px] py-[8px] border border-[#ABBA27] flex justify-center items-center z-[1]"
+          style={{
+            backgroundImage: `url(${bgbutton})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
+          Оставить заявку
+        </button>
+        <img className="absolute right-[120px] bottom-[10px]" src={masterImg} alt="" />
+        {/* <VideoCompanent /> */}
+      </div>
+      <PartnersCom />
     </>
   );
 }
