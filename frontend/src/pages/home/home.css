@@ -306,3 +306,13 @@ header {
   align-items: flex-end;
   position: relative;
 }
+
+
+.scroll-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer va Edge */
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari va Opera */
+}
