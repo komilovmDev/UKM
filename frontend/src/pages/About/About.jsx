@@ -5,6 +5,7 @@ import AboutComment from "./components/AboutComment/AboutComment";
 import ProductInTheWorld from "./components/ProductInTheWorld/ProductInTheWorld";
 import WorldImg from "./components/img/Worldimg/Frame.png";
 import AboutUs from "../home/components/AboutUs/AboutUs";
+import Rukavodstva from "../../components/rukavodstva/Rukavodstva";
 
 const About = () => {
   const aboutData = [
@@ -72,28 +73,19 @@ const About = () => {
 
   return (
     <div className="bg-[#3D3E3D] w-full h-auto">
-      <div className=" w-full flex flex-col gap-[32px]">
+      <div className="w-full flex flex-col gap-[32px]">
         <AboutUs />
       </div>
-      <div className="flex flex-col px-[120px] gap-[48px] py-[16px] pb-[96px]">
+      <div className="flex flex-col gap-[48px] py-[16px] pb-[96px]">
         <div className="flex flex-col gap-[48px] py-[16px]">
-          <p className="text-[36px] font-rubik font-medium text-[#ABBA27]">
+          {/* <p className="text-[36px] font-rubik font-medium text-[#ABBA27]">
             Рукаводство
           </p>
-          <Rukowod />
+          <Rukowod /> */}
+          <Rukavodstva />
         </div>
         <div className="flex flex-col gap-[32px] pt-[56px]">
-          {aboutData.map((data) => (
-            <AboutComment
-              key={data.id}
-              imgSrc={data.imgSrc}
-              title={data.title}
-              paragraphs={data.paragraphs}
-            />
-          ))}
-        </div>
-        <div className="pt-[59px]">
-          <ProductInTheWorld {...productData} />
+          <AboutComment />
         </div>
       </div>
     </div>

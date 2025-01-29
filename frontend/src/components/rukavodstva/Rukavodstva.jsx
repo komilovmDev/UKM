@@ -8,9 +8,9 @@ import lianatoly from '../../images/la.png';
 export default function Rukavodstva() {
     return (
         <>
-            <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[0px] gap-[40px] bg-[#3D3E3D] pt-[80px] pb-[80px]'>
+            <div className='w-full h-full flex flex-col font-rubik px-[120px] py-[0px] gap-[20px] bg-[#3D3E3D] pt-[80px] pb-[80px]'>
                 <div className="w-full flex justify-between">
-                    <h1 className="text-[36px] text-[#ABBA27]">Рукаводство</h1>
+                    <h1 className="text-[36px] text-[#FFFFFF]">История</h1>
                 </div>
                 <div className='bg-[#ffffff10] w-full h-[370px] rounded-[32px] rounded-bl-[160px] flex p-[15px] gap-[40px]'>
                     <img src={osnavatelImg} alt="" />
@@ -20,6 +20,9 @@ export default function Rukavodstva() {
                         <p className='text-[#ffffff] mt-[20px] text-[16px]'>Родился в 1949 году в Шаватском районе Хорезмской области. В 1973 году окончил Ташкентский Политехнический Институт, по специальности инженер-механик. В 1989 году вступил на должность директора «Ургенчкорммаш», которую занимал до 2014 года. С 2014 года и до последних дней своей жизни он являлся советником «АО Ургенчкорммаш».</p>
                         <p className='text-[#ffffff] mt-[20px] text-[16px]'>Атавай Атажонович был дальновидным. справедливым и внимательным руководителем. Во многом именно благодаря ему была запущена основная производственная часть завода, которая послужила трамплином для того, чтобы на сегодняшний день «Ургенчкорммаш» стал узнаваемым и конкурентноспособным предприятием на международном рынке.</p>
                     </div>
+                </div>
+                <div className="w-full flex justify-between">
+                    <h1 className="text-[36px] text-[#FFFFFF]">Рукаводство</h1>
                 </div>
                 <div className='flex gap-[48px] justify-center'>
                     <div className='flex flex-col w-[264px] h-[407px] aligin-center'>

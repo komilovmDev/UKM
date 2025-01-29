@@ -16,6 +16,8 @@ import Ustav from "../pages/Ustav/Ustav";
 import Vakancy from "../pages/Vakancy/Vakancy";
 import YilIzohi from "../pages/YilIzohi/YilIzohi";
 import Divident from "../pages/Divident/Divident";
+import DocPage from "../pages/document/DocPage";
+import News from "../pages/news/News";
 
 export const routes = [
   {
@@ -126,4 +128,16 @@ export const routes = [
     element: <Undfound />,
     fallback: <h1>Loading...</h1>,
   },
+  {
+    id: 19,
+    path: "/document",
+    element: <DocPage />,
+    fallback: <h1>Loading...</h1>
+  },
+  {
+    id: 20,
+    path: "/news" ,
+    element: <News /> ,
+    fallback: <h1>Loading...</h1>
+  }
 ];

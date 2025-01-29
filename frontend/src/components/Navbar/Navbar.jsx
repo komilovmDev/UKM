@@ -18,7 +18,8 @@ export default function Navbar() {
     { text: "О нас", url: "/About" },
     { text: "Продукты", url: "/Products" },
     { text: "Тендеры", url: "/Tenders" },
-    { text: "Новости", url: "/contact" },
+    { text: "Документы", url: "/document"},
+    { text: "Новости", url: "/news" },
     { text: "Услуги", url: "/vacancy" },
     { text: "Контакты", url: "/order" },
   ];
