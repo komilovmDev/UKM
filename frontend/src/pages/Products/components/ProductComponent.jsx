@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ProductComponent.css";
 import bgbutton from "./../../../images/Group.png";
 import Button from "../../home/components/Button_ukm/Button";
@@ -39,7 +39,9 @@ const ProductComponent = ({ id, name, desc, img }) => {
           <TruncatedText desc={desc} />
         </div>
         <div className="flex gap-[16px] ">
-          <Button />
+          <Link to={`/product/${id}`}>
+            <Button />
+          </Link>
           <button className=" bg-[#ABBA27] rounded-[8px] font-semibold text-white px-[16px] py-[8px] flex justify-center items-center transition">
             Заказать
           </button>
