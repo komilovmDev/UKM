@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./ProductComponent.css";
-import bgbutton from "./../../../images/Group.png";
 import Button from "../../home/components/Button_ukm/Button";
 
 const ProductComponent = ({ id, name, desc, img }) => {
@@ -11,52 +9,84 @@ const ProductComponent = ({ id, name, desc, img }) => {
     navigate(`/product/${id}`);
   };
 
-  const TruncatedText = ({ desc }) => {
-    const truncatedDesc =
-      desc.length > 512 ? desc.substring(0, 512) + "..." : desc;
-    return (
-      <div className="flex justify-center items-start w-[558px] h-auto px-[24px] border-l border-white">
-        <p className="product-description w-[518px] h-auto text-[16px] text-[#ffffff] text-opacity-50 leading-[1.2]">
-          {truncatedDesc}
-        </p>
-      </div>
-    );
-  };
+  const truncatedDesc = useMemo(() => {
+    if (!desc) return "";
+    return desc.length > 512 ? desc.substring(0, 512) + "..." : desc;
+  }, [desc]);
 
-  const articleStyle = {
-    padding: id % 3 ? "32px" : "0",
-  };
-
-  const imgStyle = {
-    objectFit: id % 3 ? "cover" : "contain",
-  };
+  const imgObjectFit = id % 3 ? "cover" : "contain";
+  const imgBoxPadding = id % 3 ? "p-[32px]" : "p-0";
 
   return (
-    <article className="flex w-full h-[371.5px] gap-[55px] rounded-[16px] p-[32px] relative bg-[#4E504E]">
-      <div className="flex flex-col gap-[24px] justify-between">
-        <div className="flex flex-col gap-[16px]">
-          <h1 className="font-rubik text-[32px] text-white">{name}</h1>
-          <TruncatedText desc={desc} />
+    <article
+      className={[
+        "relative w-full",
+        // desktop height как у тебя, на мобилке делаем авто
+        "min-h-[420px] sm:min-h-[380px] lg:h-[371.5px]",
+        "rounded-[16px] bg-[#4E504E]",
+        // padding как у тебя, на мобилке чуть меньше
+        "p-[16px] sm:p-[24px] lg:p-[32px]",
+        // layout
+        "flex flex-col lg:flex-row",
+        "gap-[18px] sm:gap-[24px] lg:gap-[55px]",
+        "overflow-hidden",
+      ].join(" ")}
+    >
+      {/* LEFT CONTENT */}
+      <div className="flex flex-col justify-between gap-[18px] lg:gap-[24px] w-full">
+        <div className="flex flex-col gap-[12px] lg:gap-[16px]">
+          <h1 className="font-rubik text-[22px] sm:text-[26px] lg:text-[32px] text-[#FFFFFF] leading-tight">
+            {name}
+          </h1>
+
+          {/* desc block (в CSS было: w 558 / border-left) */}
+          <div className="flex justify-center items-start w-full lg:w-[558px] h-auto lg:px-[24px] lg:border-l lg:border-[#FFFFFF]">
+            <p className="w-full lg:w-[518px] h-auto text-[14px] sm:text-[15px] lg:text-[16px] text-[#FFFFFF] opacity-50 leading-[1.2]">
+              {truncatedDesc}
+            </p>
+          </div>
         </div>
-        <div className="flex gap-[16px] ">
-          <Link to={`/product/${id}`}>
+
+        {/* buttons */}
+        <div className="flex flex-col sm:flex-row gap-[12px] sm:gap-[16px]">
+          <Link to={`/product/${id}`} className="shrink-0">
             <Button />
           </Link>
-          <button className=" bg-[#ABBA27] rounded-[8px] font-semibold text-white px-[16px] py-[8px] flex justify-center items-center transition">
+
+          <button
+            type="button"
+            onClick={handleDetailsClick}
+            className={[
+              "bg-[#ABBA27] rounded-[8px] font-semibold text-[#FFFFFF]",
+              "px-[16px] py-[8px]",
+              "flex justify-center items-center",
+              "transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ABBA27] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4E504E]",
+            ].join(" ")}
+          >
             Заказать
           </button>
         </div>
       </div>
+
+      {/* RIGHT IMAGE */}
       <div
-        className="flex justify-center items-center min-w-[499px] min-h-[299px] max-w-[499px] max-h-[299px] overflow-hidden absolute right-0 top-[50%] transform -translate-y-1/2
-"
-        style={articleStyle}
+        className={[
+          // на мобилке картинка снизу обычным блоком
+          "relative lg:absolute",
+          "w-full lg:w-[499px]",
+          "h-[220px] sm:h-[260px] lg:h-[299px]",
+          "lg:right-0 lg:top-1/2 lg:-translate-y-1/2",
+          "overflow-hidden",
+          imgBoxPadding,
+        ].join(" ")}
       >
         <img
           src={img}
           alt={name || "Product image"}
-          className="w-full h-full object-cover"
-          style={imgStyle}
+          className="w-full h-full"
+          style={{ objectFit: imgObjectFit }}
+          draggable={false}
         />
       </div>
     </article>
